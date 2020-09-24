@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Super Geocoder</title>
+</head>
+<body bgcolor="#dc9f9f">
+<h1 style="text-align:center;font-family:Arial;color:#350b03"><u>Super Geocoder</u></h1> 
+<hr>
+<h5 style="text-align:center;font-family:Arial;color:#350b03">Please upload your csv file. The values containing addresses should be in a column named "address"</hs>
+<form action="{{url_for('table')}}" method="post" enctype="multipart/form-data">
+<input type="file" accept=".csv" name="file"/>
+<button type="Submit">Submit</button>
+</form>
+<div class="output">
+{{text|safe}}
+{% include [btn] ignore missing %}
+</div>
+</body>
+</html>
